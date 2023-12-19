@@ -9,8 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@ignite-ui-kevinsilvaa/react": "^2.1.0",
+    "@ignite-ui-kevinsilvaa/react": "^2.4.0",
     "next": "14.0.4",
+    "phosphor-react": "^1.4.1",
     "react": "^18",
     "react-dom": "^18"
   },

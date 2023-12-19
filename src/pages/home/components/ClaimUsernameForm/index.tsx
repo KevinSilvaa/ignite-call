@@ -1,11 +1,15 @@
 import { Button, TextInput } from '@ignite-ui-kevinsilvaa/react'
 import { Form } from './styles'
+import { ArrowRight } from 'phosphor-react'
 
 export function ClaimUsernameForm() {
   return (
-    <Form>
-      <TextInput size={3} prefix="ignite.com/" placeholder="Seu usuário" />
-      <Button size="sm" type="submit" />
+    <Form as="form">
+      <TextInput textSize="sm" prefix="ignite.com/" placeholder="seu-usuario" />
+      <Button size="sm" type="submit">
+        Reservar usuário
+        <ArrowRight />
+      </Button>
     </Form>
   )
 }
