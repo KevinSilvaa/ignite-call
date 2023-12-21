@@ -1,7 +1,6 @@
 import { Button, Heading, MultiStep, Text } from '@ignite-ui-kevinsilvaa/react'
 import { ArrowRight, Check } from 'phosphor-react'
 import { Container, Header } from '../styles'
-import { api } from '../../lib/axios'
 import { signIn, useSession } from 'next-auth/react'
 import { AuthError, ConnectBox, ConnectItem } from './styles'
 import { useRouter } from 'next/router'
