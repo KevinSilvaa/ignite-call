@@ -21,7 +21,7 @@ import { z } from 'zod'
 import { getWeekDays } from '@/utils/get-week-days'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { convertTimeStringToMinutes } from '@/utils/convert-time-string-to-minutes'
-import { api } from '@/pages/lib/axios'
+import { api } from '@/lib/axios'
 import { useRouter } from 'next/router'
 
 const timeIntervalsFormSchema = z.object({
