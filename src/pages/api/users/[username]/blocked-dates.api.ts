@@ -1,6 +1,5 @@
 /* eslint-disable camelcase */
 import { prisma } from '@/lib/prisma'
-// import dayjs from 'dayjs'
 import { NextApiRequest, NextApiResponse } from 'next'
 
 export default async function handler(
@@ -64,8 +63,6 @@ export default async function handler(
   `
 
   const blockedDates = blockedDatesRaw.map((item) => item.date)
-
-  console.log(blockedDatesRaw)
 
   return res.json({ blockedWeekDays, blockedDates })
 }

@@ -1,10 +1,8 @@
 import { Heading, Text } from '@ignite-ui-kevinsilvaa/react'
 import Image from 'next/image'
-import { Container, Hero, Preview } from './styles'
-
-import previewImage from '@/assets/app-preview.png'
-
 import { ClaimUsernameForm } from './components/ClaimUsernameForm'
+import { Container, Hero, Preview } from './styles'
+import previewImage from '@/assets/app-preview.png'
 
 export default function Home() {
   return (
