@@ -26,6 +26,7 @@ type CalendarWeeks = CalendarWeek[]
 
 interface BlockedDates {
   blockedWeekDays: number[]
+  blockedDates: number[]
 }
 
 interface CalendarProps {
@@ -119,31 +120,14 @@ export function Calendar({ selectedDate, onDateSelected }: CalendarProps) {
           date,
           disabled:
             date.endOf('day').isBefore(new Date()) ||
-            blockedDates?.blockedWeekDays.includes(date.get('day')),
+            blockedDates?.blockedWeekDays.includes(date.get('day')) ||
+            blockedDates?.blockedDates?.includes(date.get('date')),
         }
       }),
       ...nextMonthFillArray.map((date) => {
         return { date, disabled: true }
       }),
     ]
-
-    // Código refatorado abaixo
-
-    // const calendarWeeks = calendarDays.reduce<CalendarWeeks>(
-    //   (weeks, _, index, original) => {
-    //     const isNewWeek = index % 7 === 0
-
-    //     if (isNewWeek) {
-    //       weeks.push({
-    //         week: index / 7 + 1,
-    //         days: original.slice(index, index + 7),
-    //       })
-    //     }
-
-    //     return weeks
-    //   },
-    //   [],
-    // )
 
     const calendarWeeks: CalendarWeeks = []
 
